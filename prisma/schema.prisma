@@ -1,0 +1,115 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String   @unique
+  password  String?  /// @encrypted
+  name      String?
+  image     String?
+  role      String   @default("user")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SiteSettings {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  heroTitle    String
+  heroSubtitle String
+  aboutText    String
+  seoKeywords  String[]
+  ogImage      String?
+  socialLinks  Json?
+  styleSettings Json?   // Stores primaryColor, etc.
+  email        String
+  phone        String?
+  resumeUrl    String?
+  updatedAt    DateTime @updatedAt
+}
+
+model NavItem {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  label    String
+  path     String
+  order    Int
+  isActive Boolean @default(true)
+}
+
+model Project {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  slug        String   @unique
+  description String
+  content     String
+  coverImage  String
+  images      String[]
+  techStack   String[]
+  githubUrl   String?
+  liveUrl     String?
+  featured    Boolean  @default(false)
+  order       Int      @default(0)
+  status      String   @default("published") // draft, published, archived
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Skill {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  category  String   // languages, frameworks, tools, etc.
+  icon      String?  // URL or icon name
+  level     Int?     // 1-100
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Experience {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  company     String
+  position    String
+  location    String?
+  startDate   DateTime
+  endDate     DateTime?
+  current     Boolean  @default(false)
+  description String
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Education {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  institution  String
+  degree       String
+  fieldOfStudy String
+  startDate    DateTime
+  endDate      DateTime?
+  current      Boolean  @default(false)
+  description  String?
+  order        Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model ContactSubmission {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  email     String
+  message   String
+  ipAddress String?
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}

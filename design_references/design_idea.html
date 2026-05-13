@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CS Portfolio | Full-Stack Engineer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .grid-pattern {
+            background-image: radial-gradient(circle, #256af422 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .glass-card {
+            background: rgba(34, 47, 73, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary/30">
+    <div class="relative min-h-screen w-full flex flex-col overflow-x-hidden grid-pattern">
+        <!-- Navigation -->
+        <nav
+            class="sticky top-0 z-50 w-full border-b border-white/5 bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-2 group cursor-pointer">
+                    <div class="bg-primary p-1.5 rounded-lg text-white">
+                        <span class="material-symbols-outlined text-xl block">terminal</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight">CS<span class="text-primary">Portfolio</span></span>
+                </div>
+                <div class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#projects">Projects</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#about">About</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="hidden sm:flex items-center gap-2 px-5 py-2 rounded-lg bg-primary hover:bg-primary/90 text-white text-sm font-bold transition-all shadow-lg shadow-primary/20">
+                        <span class="material-symbols-outlined text-sm">description</span>
+                        Resume
+                    </button>
+                    <div class="size-10 rounded-full border-2 border-primary/20 p-0.5">
+                        <img alt="Profile" class="rounded-full w-full h-full object-cover"
+                            data-alt="Professional headshot of a software engineer"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1-pq366PUT9mvk5xo7DLc4HIIi6fML3W6oHkMhbEsJw2skuML_NbBtbTDW7FbJ9ZaRjQswVFvdlrbasGSubin0tnSiSDl9XjYWydkJoXhoonAcAHzqqTe2xzXM_icYlbyvpI5KHRT6ufPFnGSE3dSdl7nXyk0JJViWVRGR539KrQ4dmgdcWQ5eQPQGDqAGbyfWgaBGI06vj4-9nhtNfm0TmBJjoW0GjQdh1THpTG9z4N6l0elytNbpG-BfJWocerrvAbndxvGGcoO" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Hero Section -->
+        <main class="flex-1 flex flex-col items-center justify-center px-6 py-20 text-center relative">
+            <div
+                class="absolute top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full -z-10">
+            </div>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                    </span>
+                    Available for Internships 2024
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black leading-tight tracking-tight text-white">
+                    Building the Future, One <span class="text-primary italic">Line of Code</span> at a Time
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                    Full-Stack Engineer &amp; Aspiring Founder. CS student at MIT passionate about distributed systems,
+                    scalable cloud architecture, and building high-impact startups.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <a class="w-full sm:w-auto px-8 py-4 bg-primary text-white font-bold rounded-xl hover:scale-105 transition-transform shadow-xl shadow-primary/25 flex items-center justify-center gap-2"
+                        href="#projects">
+                        View My Work
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                    <a class="w-full sm:w-auto px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
+                        href="#contact">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </main>
+        <!-- Tech Stack Section -->
+        <section class="py-20 border-y border-white/5 bg-background-dark/50">
+            <div class="max-w-7xl mx-auto px-6">
+                <p class="text-center text-slate-500 font-bold uppercase tracking-[0.2em] text-xs mb-10">Technologies I
+                    Master</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 opacity-60">
+                    <div
+                        class="flex flex-col items-center gap-3 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-default">
+                        <img alt="Python" class="size-10" data-alt="Python programming language logo"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhAZrthIUJ8DG6vuLmPoIRRL6X6MFnFtu4QDftoZxR7BlL1UxaRQpl_-feGXXZTY5R_fLpo31ydnHVTniL6P18P7wsZbqefflDjBRrzMCCnTWF-I96upkrWxlqPRML--oBC5drhip-J0myvZ8PXCuiMojZE5jU9KyGj9mnaajnZoDsCEh5g-w7L7uKphBsDoLV2LugleKCe_OtrNBv7wDajtAV5s9nc6ed86dz3XMi5gDtc18mrv27tAb_DPuMPUZgBpngdHgo4qt7" />
+                        <span class="text-xs font-medium">Python</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center gap-3 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-default">
+                        <img alt="JavaScript" class="size-10" data-alt="JavaScript programming language logo"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU7i6D3k0cqQnkEtPBplFBT3NNx_VCYw0L-RkZZy8NCrUhB_6YLvNMMHAUOvl4q_sxpdKCHqaISx7-o_g3yZf_DKjrVwZIMfm40w8EXTI-cG1aLCd-PJm0osG4sNRr4bjaO8XaYlbLIx_62p5Td3ss29HMGg4M-Krc1NlwgBzYqfOhXVmb6h6vbbsQ7mZCKxfgsEiuRmXKj0qIKb04wQNH3kygjIhyDw4pQv9ZUzQVdxhm4BSJ9TMR22c4jAzfTaiZFjuqvSFEGbGf" />
+                        <span class="text-xs font-medium">JavaScript</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center gap-3 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-default">
+                        <img alt="C++" class="size-10" data-alt="C plus plus programming language logo"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_t7ePWmrh33w6Mwb7z2OwXTvp70YrT0VU2LjEM3mtwbklEJgO-AXfGkkzg7T5jhFGfQOUVkRi-Lhx8raKh4lDxkTfzGlpjXi2Vk6_Ge76IwxCIWNDw1211virB1-0kFzK_kuBEp2iWjWpaV8eqS8Ybfb4yaN8mc_tKyKuBZrTHbx_zBwF13TzFNOv_Uj7ITcxDDbD9DWwpbxqCYA4KOEJ_9OruEbNsu2p5-M5tf7SDUtvDHW2tArGfQ0o4_QteO6hQnmERMWsMc8y" />
+                        <span class="text-xs font-medium">C++</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center gap-3 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-default">
+                        <img alt="React" class="size-10" data-alt="React frontend framework logo"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcAGtRPjm3jxhsIZgNADw0vUDLmYZXC0O5artVc2rdL1co5g-Z7Ty1bu32VXAe5uroCrJcUAPTFyAM7KGyb4ajJThWiy_ZtrVUqkQwhj1Y8J11VLCXsZWvAN8nmM5IbZFdxQCezBCIn33n_AeL3zcIeUJXPy00ipuPU4UfjdW5zXGxWISj8jnXfPfy_MdYjggswsE-q4vqG2UFohN5zQQEaMJYeh1XRXl-YgTxlyTGRQ_lkwqeFL1er-TiFaLjQ5OxZVnfjkXLLL04" />
+                        <span class="text-xs font-medium">React</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center gap-3 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-default">
+                        <img alt="AWS" class="size-10 invert dark:invert" data-alt="AWS cloud services logo"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbrJToywa0eXTbAGc6_Gkmn5DrzYE-wIB5Wgdg9seN7F9olKjpykpe3yhdrVrY3bOmxsfHORxrl-rwluZAyErTUz89sZZLVXGwpgHcLaZcz6XNU1GYh7oecXTcNCXDkWOatAc5VqzmDTJVoUrqKBuVU1_hdmsw9sSO7tZd8OcpRZmVL0L1IsmBpt814nKbnJr5QfpwjTx0sys2VYpT35Si7VMdrDm8Nm8r2gspHztVwtIJTLpQuuFFuQ5Ulesl4LTTnNYLkYqH_lBX" />
+                        <span class="text-xs font-medium">AWS</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center gap-3 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-default">
+                        <img alt="Docker" class="size-10" data-alt="Docker containerization platform logo"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-bZbLTcGilGurTdVJ3Zcx3ltJ-5LZ5XBDrZLerdWQMI5MmwTpOMzvrOVBozM0Efgr4ipY3oYQ1Eu3iSR5lXeOtNoxh_Mo0-ep-2YkZLMQVR3NGOfYUSXqaNkRwbqAnOJYejvU-LUuk_pIyfqQr77VNmn9eMv0nmMrqMktzS7XO23b48bTXmNr1AlyrdrEcg4bOKjHiiiX93zfzdjhnV4_zTUh8cgjVM1PubW51gzQ4aSnVA8lOy0oAkA37t4kajeo8c8JnfhuFoNV" />
+                        <span class="text-xs font-medium">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Projects -->
+        <section class="py-24 px-6 max-w-7xl mx-auto w-full" id="projects">
+            <div class="flex items-end justify-between mb-12">
+                <div class="space-y-2">
+                    <h2 class="text-3xl font-black text-white">Featured Projects</h2>
+                    <p class="text-slate-400">Selected work from my engineering journey.</p>
+                </div>
+                <a class="text-primary font-bold flex items-center gap-2 hover:underline" href="#">
+                    View GitHub
+                    <span class="material-symbols-outlined text-sm">open_in_new</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="glass-card rounded-2xl p-4 group hover:border-primary/50 transition-all duration-300">
+                    <div class="relative rounded-xl overflow-hidden mb-5">
+                        <img alt="AI Project"
+                            class="w-full aspect-video object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="Digital representation of artificial intelligence neural networks"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBME8z8RzrfX_PBjLWk5xw2GHQZ_Bb05geIw0cOGQfsteqoKTc_xFajbGwzo4aRCseHKkbJXlMdcvRMFOD0RG8d3Z9gF1mnz9Uc6NCaNxtN6d7n7bRkyGEe9kE_oGx1Z1hd5fvIm-fNtZvnmdPf5YmQmV7R68UnjQlQmj6Zh_c3UT5d5-AEGhOSDRG4OqEo1WOMSYMoohmrQCQrw9Ae-mPluat2prvLNMn11bTi1XbbzvskRLRV-LP5I_05Sco5r-XarESxTqZCTXD4" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+                    </div>
+                    <div class="space-y-4 px-2">
+                        <div class="flex items-start justify-between">
+                            <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">
+                                AI-Driven Task Automator</h3>
+                            <a class="text-slate-400 hover:text-white" href="#"><span
+                                    class="material-symbols-outlined">link</span></a>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            A low-latency automation engine that uses LLMs to interpret user workflows and generate
+                            executable Python scripts.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span
+                                class="px-2 py-1 rounded-md bg-white/5 text-[10px] font-bold text-slate-300 border border-white/10 uppercase">Python</span>
+                            <span
+                                class="px-2 py-1 rounded-md bg-white/5 text-[10px] font-bold text-slate-300 border border-white/10 uppercase">OpenAI</span>
+                            <span
+                                class="px-2 py-1 rounded-md bg-white/5 text-[10px] font-bold text-slate-300 border border-white/10 uppercase">React</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="glass-card rounded-2xl p-4 group hover:border-primary/50 transition-all duration-300">
+                    <div class="relative rounded-xl overflow-hidden mb-5">
+                        <img alt="Blockchain Project"
+                            class="w-full aspect-video object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="Abstract 3D rendering of blockchain data nodes"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU3NJSMtDzUpCNljoE_dZwJsjzKRqL9LXz8jTJDPvwtiD1scTwZMeFBGNVk3DwvoptGn47LhBmq4zOnjObamYgZtxYd_9saV9Fp8enR534vR4LkCth6_SOYpFKyGTqfqOQf0heRaMjKpIPicswML_BR1Z8hOFubf0GIJRhklT-jfHVt8s5hM6vzuwBADOJVYQyDIpc4rkEH4cJMN2WWDJGwhvQR9YRsQAk_JqCKVXRi2V1gRsWaeUVAzfsz8wkbIcjuDO4bErrz9YJ" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+                    </div>
+                    <div class="space-y-4 px-2">
+                        <div class="flex items-start justify-between">
+                            <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">
+                                Distributed Ledger System</h3>
+                            <a class="text-slate-400 hover:text-white" href="#"><span
+                                    class="material-symbols-outlined">link</span></a>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            High-performance blockchain architecture built for scalability, featuring a custom consensus
+                            mechanism.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span
+                                class="px-2 py-1 rounded-md bg-white/5 text-[10px] font-bold text-slate-300 border border-white/10 uppercase">C++</span>
+                            <span
+                                class="px-2 py-1 rounded-md bg-white/5 text-[10px] font-bold text-slate-300 border border-white/10 uppercase">Go</span>
+                            <span
+                                class="px-2 py-1 rounded-md bg-white/5 text-[10px] font-bold text-slate-300 border border-white/10 uppercase">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="glass-card rounded-2xl p-4 group hover:border-primary/50 transition-all duration-300">
+                    <div class="relative rounded-xl overflow-hidden mb-5">
+                        <img alt="Cloud Project"
+                            class="w-full aspect-video object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="Servers in a modern data center glowing blue"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE-_qyIEpWfYbtN8sWX1s-caF3YHOzpg7hWqCvDfoxCuqPdiBiIoxckQ6MqrobODqN4mco4gk9OQfG-HAJlWYhN-4fCJCWVJvnCO8HiJfEj8AoujGL7g-DgZgnoYYHJmRSHIde5IcWVnYP6_gBD3s4BvyR5CoYe0xBWHQmLVhORaBNrXXaCw6cldJlp9X_MgN-oqH6ZeENycLB9Z_5RU9XeTTElXyWJTTVpNzgue4LwDGdq5Ip7JnLwyeKqoBXbhEoTpYet7l181xA" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+                    </div>
+                    <div class="space-y-4 px-2">
+                        <div class="flex items-start justify-between">
+                            <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">
+                                Cloud-Native API</h3>
+                            <a class="text-slate-400 hover:text-white" href="#"><span
+                                    class="material-symbols-outlined">link</span></a>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            A scalable microservices architecture for modern retail, handling 10k+ requests per minute
+                            with ease.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span
+                                class="px-2 py-1 rounded-md bg-white/5 text-[10px] font-bold text-slate-300 border border-white/10 uppercase">Node.js</span>
+                            <span
+                                class="px-2 py-1 rounded-md bg-white/5 text-[10px] font-bold text-slate-300 border border-white/10 uppercase">AWS</span>
+                            <span
+                                class="px-2 py-1 rounded-md bg-white/5 text-[10px] font-bold text-slate-300 border border-white/10 uppercase">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="mt-auto border-t border-white/5 py-12 px-6">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="flex items-center gap-2">
+                    <div class="bg-primary/20 p-1 rounded text-primary">
+                        <span class="material-symbols-outlined text-sm block">terminal</span>
+                    </div>
+                    <span class="font-bold tracking-tight text-white">CS Portfolio</span>
+                </div>
+                <div class="text-slate-500 text-sm">
+                    © 2024 Computer Science Portfolio. Built with passion and code.
+                </div>
+                <div class="flex items-center gap-6">
+                    <a class="text-slate-400 hover:text-primary transition-colors" href="#">
+                        <span class="material-symbols-outlined">share</span>
+                    </a>
+                    <a class="text-slate-400 hover:text-primary transition-colors" href="#">
+                        <span class="material-symbols-outlined">alternate_email</span>
+                    </a>
+                    <a class="text-slate-400 hover:text-primary transition-colors" href="#">
+                        <span class="material-symbols-outlined">code</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

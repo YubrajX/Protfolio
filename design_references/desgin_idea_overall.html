@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Me | Portfolio.dev</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(34, 47, 73, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .skill-tag {
+            background: rgba(37, 106, 244, 0.1);
+            border: 1px solid rgba(37, 106, 244, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Header / Nav -->
+        <header
+            class="sticky top-0 z-50 w-full border-b border-solid border-[#222f49] bg-background-dark/80 backdrop-blur-md px-6 md:px-20 lg:px-40 py-4">
+            <div class="max-w-[1200px] mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="text-primary">
+                        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd"
+                                d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight">Portfolio.dev</span>
+                </div>
+                <nav class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+                    <a class="text-sm font-medium text-primary" href="#">About</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Projects</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+                    <button
+                        class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all">
+                        Hire Me
+                    </button>
+                </nav>
+                <div class="md:hidden">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 max-w-[1200px] mx-auto w-full px-6 md:px-10 py-12 lg:py-20 space-y-24">
+            <!-- Hero Section -->
+            <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1 space-y-6">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                        </span>
+                        Available for Internships 2024
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+                        Engineering with <span class="text-primary">Purpose.</span>
+                    </h1>
+                    <p class="text-lg text-slate-400 leading-relaxed max-w-xl">
+                        I'm a Computer Science student at SFSU, obsessed with building high-performance systems and
+                        exploring the intersection of engineering and entrepreneurship.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button
+                            class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-bold flex items-center gap-2 transition-all">
+                            <span class="material-symbols-outlined">mail</span>
+                            Get in Touch
+                        </button>
+                        <button
+                            class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-3 rounded-lg font-bold flex items-center gap-2 transition-all border border-slate-700">
+                            <span class="material-symbols-outlined">download</span>
+                            Download CV
+                        </button>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 flex justify-center">
+                    <div class="relative w-72 h-72 md:w-96 md:h-96">
+                        <div class="absolute inset-0 bg-primary/20 rounded-full blur-3xl"></div>
+                        <div
+                            class="relative w-full h-full rounded-2xl overflow-hidden border-2 border-slate-800 shadow-2xl">
+                            <img alt="Profile Image"
+                                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                                data-alt="Professional headshot of a smiling developer in a modern office"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEgQfJEWbSmAG_kjBUVQIfned9GF1omX7_7pNn_G067gT9LxDa77LFB3kgKSThyRiSSq7DoIQUWqL628IShbM6sP7CrEyat0YB6TSyRzCVTFYBqIVQWThNVsTxNe4g4Y95yUtj2PFTcoc8zD9MdygMTJylOoY_9e54qzDKkx8zjpApZudwtwnVuSvkj3FbYGoYjka1GyzlmxKlAtzHCpIl3keciLcYhHDoOA-1WcSmOkdtYRmawfu9Uu3lg-u1gkf-327_5c-MP7gZ" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Narrative / Journey Section -->
+            <section class="space-y-8">
+                <div class="flex items-center gap-4">
+                    <h2 class="text-3xl font-bold tracking-tight">My Journey</h2>
+                    <div class="h-px flex-1 bg-slate-800"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2 glass-card p-8 rounded-xl space-y-4">
+                        <p class="text-slate-300 leading-relaxed italic text-lg">
+                            "It all started with a simple 'Hello World' in Python, and since then, I've been hooked on
+                            the magic of turning logic into reality."
+                        </p>
+                        <p class="text-slate-400 leading-relaxed">
+                            Currently pursuing my B.S. in Computer Science, my academic path has been more than just
+                            lectures—it’s been a series of deep dives into how systems scale and how users interact with
+                            technology. I’ve spent my nights debugging complex distributed systems and my weekends
+                            building side projects that solve real problems in my community.
+                        </p>
+                        <p class="text-slate-400 leading-relaxed">
+                            My ultimate goal is to bridge the gap between technical excellence and business value. While
+                            I'm focused on landing a Software Engineering role at a high-growth company, my long-term
+                            vision is to launch a startup that leverages AI to democratize education.
+                        </p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                            <h4 class="text-primary font-bold mb-4 uppercase text-xs tracking-widest">Education</h4>
+                            <p class="font-bold">B.S. Computer Science</p>
+                            <p class="text-sm text-slate-400">San Francisco State University</p>
+                            <p class="text-xs text-slate-500 mt-2">Expected Graduation: May 2025</p>
+                        </div>
+                        <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                            <h4 class="text-primary font-bold mb-4 uppercase text-xs tracking-widest">Key Focus Areas
+                            </h4>
+                            <ul class="text-sm text-slate-400 space-y-2">
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-xs text-primary">circle</span> Distributed
+                                    Systems</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-xs text-primary">circle</span> Machine
+                                    Learning Ops</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-xs text-primary">circle</span> Full-Stack
+                                    Architecture</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Technical Toolkit Section -->
+            <section class="space-y-10">
+                <div class="text-center space-y-3">
+                    <h2 class="text-3xl font-bold tracking-tight">Technical Toolkit</h2>
+                    <p class="text-slate-400">The technologies I use to bring ideas to life</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Languages -->
+                    <div
+                        class="bg-slate-900 border border-slate-800 p-8 rounded-xl hover:border-primary/50 transition-all group">
+                        <div
+                            class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                            <span class="material-symbols-outlined text-primary">code</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-6">Languages</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">TypeScript</span>
+                            <span
+                                class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">Python</span>
+                            <span class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">Java</span>
+                            <span class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">C++</span>
+                            <span class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">Go</span>
+                            <span class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">Rust
+                                (Learning)</span>
+                        </div>
+                    </div>
+                    <!-- Frameworks -->
+                    <div
+                        class="bg-slate-900 border border-slate-800 p-8 rounded-xl hover:border-primary/50 transition-all group">
+                        <div
+                            class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                            <span class="material-symbols-outlined text-primary">layers</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-6">Frameworks</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">React.js</span>
+                            <span
+                                class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">Next.js</span>
+                            <span
+                                class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">Node.js</span>
+                            <span
+                                class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">FastAPI</span>
+                            <span class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">Tailwind
+                                CSS</span>
+                            <span
+                                class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">Express</span>
+                        </div>
+                    </div>
+                    <!-- Tools & Infrastructure -->
+                    <div
+                        class="bg-slate-900 border border-slate-800 p-8 rounded-xl hover:border-primary/50 transition-all group">
+                        <div
+                            class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                            <span class="material-symbols-outlined text-primary">terminal</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-6">Infrastructure</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">Docker</span>
+                            <span
+                                class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">Kubernetes</span>
+                            <span class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">AWS (EC2,
+                                S3)</span>
+                            <span
+                                class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">PostgreSQL</span>
+                            <span class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">Redis</span>
+                            <span class="skill-tag px-3 py-1 rounded-md text-xs font-medium text-slate-300">Git /
+                                CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Mission / "My Why" Bento Grid -->
+            <section class="space-y-10">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                    <div class="space-y-2">
+                        <h2 class="text-3xl font-bold tracking-tight">Philosophy &amp; Mission</h2>
+                        <p class="text-slate-400 italic">"The best way to predict the future is to invent it."</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <!-- Bento Box 1: Problem Solving -->
+                    <div
+                        class="md:col-span-8 glass-card p-10 rounded-2xl flex flex-col justify-between group overflow-hidden relative">
+                        <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <span class="material-symbols-outlined text-[120px]">psychology</span>
+                        </div>
+                        <div class="space-y-4 relative z-10">
+                            <h3 class="text-2xl font-bold">First Principles Problem Solving</h3>
+                            <p class="text-slate-400 text-lg leading-relaxed max-w-2xl">
+                                I don't just write code; I design systems. My philosophy is rooted in breaking down
+                                complex challenges into their most fundamental truths and building back up. I believe in
+                                writing software that isn't just functional, but maintainable, scalable, and elegant.
+                            </p>
+                        </div>
+                        <div class="mt-8 flex items-center gap-4 text-primary font-semibold">
+                            <span>How I approach challenges</span>
+                            <span class="material-symbols-outlined">trending_flat</span>
+                        </div>
+                    </div>
+                    <!-- Bento Box 2: Entrepreneurial Spirit -->
+                    <div
+                        class="md:col-span-4 bg-primary p-10 rounded-2xl flex flex-col justify-between text-white shadow-[0_20px_50px_rgba(37,106,244,0.3)]">
+                        <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                            <span class="material-symbols-outlined">rocket_launch</span>
+                        </div>
+                        <div class="space-y-3">
+                            <h3 class="text-2xl font-bold">Future Founder</h3>
+                            <p class="text-white/80">
+                                Driven by a desire to build products that redefine how we interact with information. I'm
+                                constantly studying market-fit and user psychology.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Bento Box 3: Collaboration -->
+                    <div class="md:col-span-5 bg-slate-900 border border-slate-800 p-8 rounded-2xl">
+                        <h4 class="text-lg font-bold mb-3 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">groups</span>
+                            Collaboration First
+                        </h4>
+                        <p class="text-slate-400 text-sm">
+                            Software is a team sport. I thrive in environments where cross-functional collaboration is
+                            the norm and where "we" always comes before "I".
+                        </p>
+                    </div>
+                    <!-- Bento Box 4: Continuous Learning -->
+                    <div
+                        class="md:col-span-7 bg-slate-900 border border-slate-800 p-8 rounded-2xl flex items-center gap-6 overflow-hidden">
+                        <div class="hidden sm:block">
+                            <div class="p-4 bg-slate-800 rounded-xl">
+                                <span class="material-symbols-outlined text-primary">school</span>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <h4 class="text-lg font-bold">Continuous Beta</h4>
+                            <p class="text-slate-400 text-sm">
+                                The tech landscape moves at light speed. I dedicate 5 hours every week to learning new
+                                paradigms, from decentralized finance to neuro-symbolic AI.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Final CTA Section -->
+            <section class="py-12">
+                <div
+                    class="relative bg-gradient-to-r from-primary/20 to-transparent border border-primary/20 p-12 rounded-3xl overflow-hidden text-center md:text-left">
+                    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl">
+                    </div>
+                    <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                        <div class="space-y-4">
+                            <h2 class="text-3xl font-extrabold">Ready to build something amazing?</h2>
+                            <p class="text-slate-400 max-w-lg">
+                                I'm currently looking for new opportunities in software engineering and product
+                                development. Let's talk about how I can help your team.
+                            </p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+                            <button
+                                class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-xl font-bold transition-all shadow-xl shadow-primary/20">
+                                Let's Connect
+                            </button>
+                            <button
+                                class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white px-10 py-4 rounded-xl font-bold transition-all">
+                                View Portfolio
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="border-t border-slate-800 py-12 px-6 lg:px-40">
+            <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-3 opacity-50">
+                    <div class="size-6 text-white">
+                        <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd"
+                                d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <span class="font-bold">Portfolio.dev</span>
+                </div>
+                <div class="flex gap-8 text-slate-500 text-sm">
+                    <a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+                    <a class="hover:text-primary transition-colors" href="#">GitHub</a>
+                    <a class="hover:text-primary transition-colors" href="#">Twitter</a>
+                    <a class="hover:text-primary transition-colors" href="#">RSS</a>
+                </div>
+                <p class="text-slate-500 text-sm">© 2024 Built with Passion.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

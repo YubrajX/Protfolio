@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: var(--font-inter);
+
+  --color-primary: var(--primary);
+  --color-background-light: var(--background);
+  --color-background-dark: #101622;
+
+  --color-text-main: var(--text-main);
+  --color-card-bg: var(--card-bg);
+  --color-navbar-bg: var(--navbar-bg);
+
+  --color-slate-900: #0f172a;
+  --color-slate-100: #f1f5f9;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Custom Utilities based on design */
+@utility glass-card {
+  /* background is now handled by bg-[var(--card-bg)] utility */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@utility grid-pattern {
+  background-image: radial-gradient(circle, #256af422 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    /* Offset for sticky navbar */
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply selection:bg-primary/30;
+  }
 }
